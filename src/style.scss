@@ -1,0 +1,329 @@
+@import "./variables.scss";
+
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-boldblocks-svg-block {
+  display: flex;
+
+  &,
+  * {
+    box-sizing: border-box;
+  }
+
+  :not(.use-as-button) {
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .is-invert {
+    svg {
+      transform: scaleY(-1);
+    }
+  }
+
+  .is-flip {
+    svg {
+      transform: scaleX(-1);
+    }
+
+    &.is-invert {
+      svg {
+        transform: scale(-1, -1);
+      }
+    }
+  }
+
+  // Margin
+  &[style*="--bb--margin-top--sm"] {
+    margin-top: var(--bb--margin-top--sm) !important;
+  }
+  &[style*="--bb--margin-top--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      margin-top: var(--bb--margin-top--md) !important;
+    }
+  }
+  &[style*="--bb--margin-top--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      margin-top: var(--bb--margin-top--lg) !important;
+    }
+  }
+  &[style*="--bb--margin-right--sm"] {
+    margin-right: var(--bb--margin-right--sm) !important;
+  }
+  &[style*="--bb--margin-right--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      margin-right: var(--bb--margin-right--md) !important;
+    }
+  }
+  &[style*="--bb--margin-right--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      margin-right: var(--bb--margin-right--lg) !important;
+    }
+  }
+  &[style*="--bb--margin-bottom--sm"] {
+    margin-bottom: var(--bb--margin-bottom--sm) !important;
+  }
+  &[style*="--bb--margin-bottom--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      margin-bottom: var(--bb--margin-bottom--md) !important;
+    }
+  }
+  &[style*="--bb--margin-bottom--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      margin-bottom: var(--bb--margin-bottom--lg) !important;
+    }
+  }
+  &[style*="--bb--margin-left--sm"] {
+    margin-left: var(--bb--margin-left--sm) !important;
+  }
+  &[style*="--bb--margin-left--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      margin-left: var(--bb--margin-left--md) !important;
+    }
+  }
+  &[style*="--bb--margin-left--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      margin-left: var(--bb--margin-left--lg) !important;
+    }
+  }
+
+  // Justify alignment
+  &[style*="--bb--justify-alignment--"] {
+    display: flex;
+  }
+  &[style*="--bb--justify-alignment--sm"] {
+    justify-content: var(--bb--justify-alignment--sm);
+  }
+  &[style*="--bb--justify-alignment--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      justify-content: var(--bb--justify-alignment--md);
+    }
+  }
+  &[style*="--bb--justify-alignment--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      justify-content: var(--bb--justify-alignment--lg);
+    }
+  }
+
+  // Stack conext
+  &[style*="--bb--zindex"]  {
+    position: relative;
+    z-index: var(--bb--zindex);
+  }
+
+  // Block inner
+  > .wp-block-boldblocks-svg-block__inner {
+    display: block;
+    line-height: 0;
+  }
+
+  // Width
+  [style*="--bb--width--sm"] {
+    width: var(--bb--width--sm);
+  }
+  [style*="--bb--width--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      width: var(--bb--width--md);
+    }
+  }
+  [style*="--bb--width--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      width: var(--bb--width--lg);
+    }
+  }
+
+  // Height
+  [style*="--bb--height--sm"] {
+    height: var(--bb--height--sm);
+  }
+  [style*="--bb--height--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      height: var(--bb--height--md);
+    }
+  }
+  [style*="--bb--height--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      height: var(--bb--height--lg);
+    }
+  }
+
+  // Spacing
+  // Padding
+  [style*="--bb--padding-top--sm"] {
+    padding-top: var(--bb--padding-top--sm);
+  }
+  [style*="--bb--padding-top--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      padding-top: var(--bb--padding-top--md);
+    }
+  }
+  [style*="--bb--padding-top--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      padding-top: var(--bb--padding-top--lg);
+    }
+  }
+  [style*="--bb--padding-right--sm"] {
+    padding-right: var(--bb--padding-right--sm);
+  }
+  [style*="--bb--padding-right--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      padding-right: var(--bb--padding-right--md);
+    }
+  }
+  [style*="--bb--padding-right--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      padding-right: var(--bb--padding-right--lg);
+    }
+  }
+  [style*="--bb--padding-bottom--sm"] {
+    padding-bottom: var(--bb--padding-bottom--sm);
+  }
+  [style*="--bb--padding-bottom--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      padding-bottom: var(--bb--padding-bottom--md);
+    }
+  }
+  [style*="--bb--padding-bottom--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      padding-bottom: var(--bb--padding-bottom--lg);
+    }
+  }
+  [style*="--bb--padding-left--sm"] {
+    padding-left: var(--bb--padding-left--sm);
+  }
+  [style*="--bb--padding-left--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      padding-left: var(--bb--padding-left--md);
+    }
+  }
+  [style*="--bb--padding-left--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      padding-left: var(--bb--padding-left--lg);
+    }
+  }
+
+  // Border
+  [style*="--bb--border--sm"] {
+    border: var(--bb--border--sm);
+  }
+  [style*="--bb--border--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      border: var(--bb--border--md);
+    }
+  }
+  [style*="--bb--border--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      border: var(--bb--border--lg);
+    }
+  }
+
+  // Border radius
+  [style*="--bb--border-radius--sm"] {
+    border-radius: var(--bb--border-radius--sm);
+  }
+  [style*="--bb--border-radius--md"] {
+    @media (min-width: map-get($breakpoints, md )) {
+      border-radius: var(--bb--border-radius--md);
+    }
+  }
+  [style*="--bb--border-radius--lg"] {
+    @media (min-width: map-get($breakpoints, lg )) {
+      border-radius: var(--bb--border-radius--lg);
+    }
+  }
+
+  .use-as-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &.icon-right {
+      svg {
+        order: 1;
+      }
+    }
+
+    &.is-edit .button-text {
+      line-height: 1;
+    }
+
+    svg {
+      height: auto !important;
+    }
+
+    // Width
+    &[style*="--bb--svg-width--sm"] {
+      svg {
+        width: var(--bb--svg-width--sm) !important;
+      }
+    }
+    &[style*="--bb--svg-width--md"] {
+      @media (min-width: map-get($breakpoints, md )) {
+        svg {
+          width: var(--bb--svg-width--md) !important;
+        }
+      }
+    }
+    &[style*="--bb--svg-width--lg"] {
+      @media (min-width: map-get($breakpoints, lg )) {
+        svg {
+          width: var(--bb--svg-width--lg) !important;
+        }
+      }
+    }
+
+    // Gap
+    &[style*="--bb--gap--sm"] {
+      gap: var(--bb--gap--sm);
+    }
+    &[style*="--bb--gap--md"] {
+      @media (min-width: map-get($breakpoints, md )) {
+        gap: var(--bb--gap--md);
+      }
+    }
+    &[style*="--bb--gap--lg"] {
+      @media (min-width: map-get($breakpoints, lg )) {
+        gap: var(--bb--gap--lg);
+      }
+    }
+
+    // Text color
+    &[style*="--bb--text--color:"] {
+      color: var(--bb--text--color);
+    }
+  }
+
+  // Color
+  [style*="--bb--fill--color:"] {
+    // color: var(--bb--fill--color, currentColor);
+    [fill],
+    svg {
+      &,
+      * {
+        fill: var(--bb--fill--color) !important;
+      }
+    }
+  }
+  [style*="--bb--stroke--color:"] {
+    color: var(--bb--stroke--color);
+    [stroke],
+    svg {
+      &,
+      * {
+        stroke: var(--bb--stroke--color) !important;
+      }
+    }
+  }
+  [style*="--bb--background--color:"] {
+    background: var(--bb--background--color);
+  }
+}

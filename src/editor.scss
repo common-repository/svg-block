@@ -1,0 +1,42 @@
+.svg-placeholder {
+  &__inner {
+    max-width: 100%;
+    overflow: hidden;
+
+    > * {
+      flex-grow: 1;
+      max-width: 100%;
+    }
+  }
+
+  button {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .components-form-file-upload {
+    button {
+      width: 100%;
+    }
+  }
+
+  .block-icon {
+    flex-grow: 0;
+    cursor: pointer;
+  }
+}
+
+.svg-block-replace-dropdown {
+  z-index: 99999;
+
+  .components-popover__content {
+    padding: 0 8px;
+
+    @media (min-width: 600px) {
+      width: fit-content;
+      max-width: 480px;
+      padding: 4px 12px;
+    }
+  }
+}
